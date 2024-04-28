@@ -43,7 +43,7 @@ class Ball(GameSprite):
         self.rect.y  += self.speed_y
         if self.rect.y <5 :
             self.speed_y *= -1
-        elif self.rect.y > 495:
+        elif self.rect.y > 450:
             self.speed_y *= -1
 
 
@@ -88,7 +88,7 @@ while game:
         ball.update()
 
         if sprite.collide_rect(racket1, ball ) or sprite.collide_rect(racket2, ball):
-            ball.speed *= -1
+            ball.speed.x *= -1
 
         if ball.rect.x > 550:
             
